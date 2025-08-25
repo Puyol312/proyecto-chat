@@ -1,0 +1,27 @@
+-----------------------FRONTEND-------------------------------------
+  Vaadin Router un router.
+  --> npm install --save @vaadin/router
+  --> import { Router } from '@vaadin/router';
+
+  Desde el forntend vamos a usar la siguiente coneccion con la api:
+    State <------> API (backend)
+
+  Se usa la siguiente modelo de escritura para los custom elements:
+    x-custom-element //con x al principio
+  Para poder ejecutar este programa la base de datos en real time tiene que permitir la lectura
+  en sus rules.
+
+  El State accede a los datos de la API por tanto accede a la base de datos. 
+  Y les avisa a los que esten subscriptos a los cambios del state.
+  Los componentes (Pages/Components) nunca le avisan a la api directamente sino que pasan por el State.
+  Para poder leer los objetos desde el fron pasados por el state:
+    /FRONT/<------>/STATE/<---BACK--->/API/<------>/DB/<------>{BIG JSON}
+    Para poder pasar del State con el BIG JSOn es mejor pasarlo a un array a tener un big JSON.
+-----------------------BACKEND--------------------------------------
+  Uso de nodemon para hacer un watch
+  --> npm install --save-dev nodemon
+  "script":{
+    "dev": "nodemon --watch ./src --exec \"npx tsx ./src/index.ts\""
+  }
+  Desde el lado del back tenemos acceso completo a la base de datos y genereamos los endpoints de la API para que el state se 
+  conecte.

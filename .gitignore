@@ -1,0 +1,8 @@
+frontend/src/rtdb.ts
+frontend/dist/
+frontend/.parcel-cache/
+frontend/node_modules/
+
+backend/serviceAccountKey.json
+backend/src/db.ts
+backend/node_modules/

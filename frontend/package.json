@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html --dist-dir build --public-url /chat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.15.4",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@vaadin/router": "^2.0.0",
+    "firebase": "^8.7.1",
+    "lodash": "^4.17.21"
+  }
+}
